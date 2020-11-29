@@ -1,0 +1,388 @@
+// Pokemon Info Page Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+.pokemon {
+    position: relative;
+    margin: auto;
+    padding: size(40) size(20);
+    width: 100%;
+    max-width: size(500);
+
+    // Background Colour Based on Pokemon Type
+    &__bg {
+        position: absolute;
+        top: -(size(50));
+        left: calc(-50vw + 50%);
+        z-index: $minusLayer;
+        display: block;
+        height: size(190);
+        width: 100vw;
+    }
+
+    // Pokemon Image Styles
+    &__image__contain {
+        filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.07));
+
+        div:first-of-type {
+            background: white;
+            clip-path: polygon(0 0, 0 90%, 10% 100%, 100% 100%, 100% 0);
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        font-size: size(24);
+        font-weight: 700;
+        line-height: 1.5;
+        text-transform: capitalize;
+    }
+
+    &__number {
+        font-size: size(12);
+        margin: size(5) 0 0;
+    }
+
+    // Pokemon Types Styles
+    &__types {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__type {
+        margin: size(20) size(5);
+        padding: size(5) size(10);
+        color: white;
+        text-transform: uppercase;
+        background: red;
+        border-radius: size(20);
+    }
+
+    [data-type='bug'] {
+        background: $bug;
+    }
+
+    [data-type='dark'] {
+        background: $dark;
+    }
+
+    [data-type='dragon'] {
+        background: $dragon;
+    }
+
+    [data-type='electric'] {
+        background: $electric;
+    }
+
+    [data-type='fairy'] {
+        background: $fairy;
+    }
+
+    [data-type='fighting'] {
+        background: $fighting;
+    }
+
+    [data-type='fire'] {
+        background: $fire;
+    }
+
+    [data-type='flying'] {
+        background: $flying;
+    }
+
+    [data-type='ghost'] {
+        background: $ghost;
+    }
+
+    [data-type='grass'] {
+        background: $grass;
+    }
+
+    [data-type='ground'] {
+        background: $ground;
+    }
+
+    [data-type='ice'] {
+        background: $ice;
+    }
+
+    [data-type='normal'] {
+        background: $normal;
+    }
+
+    [data-type='poison'] {
+        background: $poison;
+    }
+
+    [data-type='psychic'] {
+        background: $psychic;
+    }
+
+    [data-type='rock'] {
+        background: $rock;
+    }
+
+    [data-type='steel'] {
+        background: $steel;
+    }
+
+    [data-type='water'] {
+        background: $water;
+    }
+
+
+    // Pokemon Info Styles
+    h2, 
+    h3 {
+        font-size: size(16);
+        font-weight: 700;
+        text-align: left;
+    }
+    
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: size(20);
+        background: white;
+    }
+
+    &__description {
+        margin: 0 0 size(10);
+        padding-bottom: size(15);
+        text-align: left;
+        border-bottom: size(1) solid $grey-200;
+    }
+
+    &__height,
+    &__width {
+        width: 50%;
+        text-align: left;
+    }
+
+    // Pokemon Stats Styles
+    &__stats {
+        margin-top: size(40);
+    }
+
+    &__stat {
+        display: flex;
+        align-items: center;
+
+        &Name {
+            margin: size(5) 0;
+            width: size(60);
+            text-align: left;
+            text-transform: capitalize;
+        }
+
+        &Bar {
+            -webkit-appearance: none;
+            appearance: none;
+            display: flex;
+            flex-grow: 1;
+            margin: 0 size(15);
+            height: size(13);
+        }
+
+        &Value {
+            font-size: size(12);
+        }
+
+        progress[value]::-webkit-progress-bar {
+            background: $grey-100;
+            border: size(1) solid black;
+            border-radius: size(12);
+        }
+           
+        progress[value]::-webkit-progress-value {
+            background: linear-gradient(270deg, #25ACFA 0%, #0C4A83 100%), #C4C4C4;
+        }
+           
+        progress[value="100"]::-webkit-progress-value  {
+            background: linear-gradient(270deg, #25ACFA 0%, #0C4A83 100%), #C4C4C4;
+        }
+           
+        /* Firefox */
+        progress[value]::-moz-progress-bar {
+            background: linear-gradient(270deg, #25ACFA 0%, #0C4A83 100%), #C4C4C4;
+            border: size(2) solid black;
+            border-radius: size(12);
+        }
+           
+        progress[value="100"]::-moz-progress-bar  {
+            background: linear-gradient(270deg, #25ACFA 0%, #0C4A83 100%), #C4C4C4;
+        }
+    }
+
+    // Pokemon Game Styles
+    &__games {
+        margin-top: size(40);
+        text-align: left;
+    }
+
+    &__game {
+        display: inline-block;
+        margin-right: size(5);
+        margin-bottom: size(10);
+        padding: size(5) size(10);
+        text-transform: capitalize;
+        border-radius: size(20);
+    }
+
+    [data-game-colour='red'] {
+        background: $red;
+        border: size(2) solid $red-border;
+    }
+
+    [data-game-colour='blue'] {
+        background: $blue;
+        border: size(2) solid $blue-border;
+    }
+
+    [data-game-colour='yellow'] {
+        background: $yellow;
+        border: size(2) solid $yellow-border;
+    }
+
+    [data-game-colour='gold'] {
+        background: $gold;
+        border: size(2) solid $gold-border;
+    }
+
+    [data-game-colour='silver'] {
+        background: $silver;
+        border: size(2) solid $silver-border;
+    }
+
+    [data-game-colour='crystal'] {
+        background: $crystal;
+        border: size(2) solid $crystal-border;
+    }
+
+    [data-game-colour='ruby'] {
+        background: $ruby;
+        border: size(2) solid $ruby-border;
+    }
+
+    [data-game-colour='sapphire'] {
+        background: $sapphire;
+        border: size(2) solid $sapphire-border;
+    }
+
+    [data-game-colour='emerald'] {
+        background: $emerald;
+        border: size(2) solid $emerald-border;
+    }
+
+    [data-game-colour='firered'] {
+        background: $firered;
+        border: size(2) solid $firered-border;
+    }
+
+    [data-game-colour='leafgreen'] {
+        background: $leafgreen;
+        border: size(2) solid $leafgreen-border;
+    }
+
+    [data-game-colour='diamond'] {
+        background: $diamond;
+        border: size(2) solid $diamond-border;
+    }
+
+    [data-game-colour='platinum'] {
+        background: $platinum;
+        border: size(2) solid $platinum-border;
+    }
+
+    [data-game-colour='heartgold'] {
+        background: $heartgold;
+        border: size(2) solid $heartgold-border;
+    }
+
+    [data-game-colour='pearl'] {
+        background: $pearl;
+        border: size(2) solid $pearl-border;
+    }
+
+    [data-game-colour='soulsilver'] {
+        background: $soulsilver;
+        border: size(2) solid $soulsilver-border;
+    }
+
+    [data-game-colour='white'] {
+        background: $white;
+        border: size(2) solid $white-border;
+    }
+
+    [data-game-colour='black'] {
+        background: $black;
+        border: size(2) solid $black-border;
+    }
+
+    [data-game-colour='black-2'] {
+        background: $black-2;
+        border: size(2) solid $black-2-border;
+    }
+
+    [data-game-colour='white-2'] {
+        background: $white-2;
+        border: size(2) solid $white-2-border;
+    }
+
+    [data-game-colour='omegaruby'] {
+        background: $omegaruby;
+        border: size(2) solid $omegaruby-border;
+    }
+
+    [data-game-colour='x'] {
+        background: $x;
+        border: size(2) solid $x-border;
+    }
+
+    [data-game-colour='y'] {
+        background: $y;
+        border: size(2) solid $y-border;
+    }
+
+    [data-game-colour='alphasapphire'] {
+        background: $alphasapphire;
+        border: size(2) solid $alphasapphire-border;
+    }
+
+    [data-game-colour='ultrasun'] {
+        background: $ultrasun;
+        border: size(2) solid $ultrasun-border;
+    }
+
+    [data-game-colour='ultramoon'] {
+        background: $ultramoon;
+        border: size(2) solid $ultramoon-border;
+    }
+
+    [data-game-colour='letsgopikachu'] {
+        background: $letsgopikachu;
+        border: size(2) solid $letsgopikachu-border;
+    }
+
+    [data-game-colour='letsgoeevee'] {
+        background: $letsgoeevee;
+        border: size(2) solid $letsgoeevee-border;
+    }
+
+    [data-game-colour='sword'] {
+        background: $sword;
+        border: size(2) solid $sword-border;
+    }
+
+    [data-game-colour='shield'] {
+        background: $shield;
+        border: size(2) solid $shield-border;
+    }
+}

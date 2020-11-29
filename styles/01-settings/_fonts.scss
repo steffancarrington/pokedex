@@ -1,0 +1,10 @@
+// Site Font Declarations
+
+@font-face {
+    font-family: 'Spacegrotesk-Regular';
+    src: url('../../public/fonts/spacegrotesk-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$bodyFont: 'Spacegrotesk-Regular', 'Lucida Grande', Tahoma, Sans-Serif;

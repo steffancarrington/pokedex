@@ -1,0 +1,31 @@
+// Search Form Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+.search {
+    position: absolute;
+    top: size(43);
+    left: size(110);
+    width: 60%;
+    max-width: size(250);
+
+    &__input {
+        padding: size(5);
+        height: size(40);
+        width: 100%;
+        color: black;
+        border: size(2) solid $red-500;
+    }
+
+    ::placeholder {
+        color: black;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,130 @@
+// Pokemon Grid Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+.pokeGrid {
+    margin: size(30) 0;
+    padding: 0;
+    width: 100%;
+    max-width: size(1400);
+    list-style: none;
+
+    &__item {
+        padding: size(20);
+        border-bottom: size(1) solid $grey-200;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $black-100;
+        text-decoration: none;
+
+        div:first-of-type {
+            max-width: 40px !important;
+        }
+    }
+
+    &__image {
+        height: size(40);
+        width: size(40);
+    }
+
+    &__title {
+        margin: 0 0 size(5);
+        font-size: size(16);
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    &__number {
+        width: 100%;
+        font-size: size(12);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: size(20);
+        text-align: left;
+    }
+
+    @include breakpoint(vsmall) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: size(20);
+        filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.07));
+
+        &__item {
+            margin-bottom: size(30);
+            padding: size(20);
+            width: 48%;
+            border-bottom: 0;
+            background: white;
+            clip-path: polygon(0 0, 0 90%, 10% 100%, 100% 100%, 100% 0);
+        }
+
+        &__link {
+            flex-wrap: wrap;
+
+            div:first-of-type {
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        &__image {
+            margin: 0 auto size(15);
+            width: size(140);
+            height: size(140);
+        }
+
+        &__inner {
+            padding-left: 0;
+            min-width: 50%;
+        }
+
+        &__inner,
+        &__type {
+            margin-top: size(15);
+        }
+    }
+
+    @include breakpoint(small) {
+        &__item {
+            padding: size(20);
+            width: 32%;
+            border-bottom: 0;
+            background: white;
+        }
+    }
+
+    @include breakpoint(lmedium) {
+        &__item {
+            width: 23%;
+        }
+    }
+
+    @include breakpoint(large) {
+        &__item {
+            width: 19%;
+        }
+    }
+
+    @include breakpoint(large-screens) {
+        &__item {
+           width: 15%; 
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// Base Element Styles (HTML, body)
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+  margin: size(20) auto;
+  font-family: $bodyFont;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  background: $grey-100;
+}

@@ -1,0 +1,77 @@
+// Pagination Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    margin: size(40) 0;
+
+    &__next, 
+    &__prev {
+        margin-bottom: size(20);
+        text-decoration: none;
+        filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.07));
+
+        span {
+            display: block;
+            padding: size(15);
+            color: white;
+            font-size: size(16);
+            text-align: center;
+            background: $purple-300;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            span {
+                background: lighten($purple-300, 10%);
+            }
+        }
+    }
+
+    &__next {
+        span {
+           clip-path: polygon(0 0, 0 100%, 0% 100%, 95% 100%, 110% 0);
+        }
+        
+    }
+
+    &__prev {
+        span {
+            clip-path: polygon(0 0, 0 65%, 5% 100%, 100% 100%, 100% 0);
+        } 
+    }
+
+    @include breakpoint(small) {
+        flex-direction: row;
+        justify-content: space-around;
+
+        &__next,
+        &__prev {
+            width: 45%;
+        }
+
+        &__next {
+            span {
+               clip-path: polygon(0 0, 0 100%, 0% 100%, 90% 100%, 115% 0);
+            }
+            
+        }
+    
+        &__prev {
+            span {
+                clip-path: polygon(0 0, 0 60%, 10% 100%, 100% 100%, 100% 0);
+            } 
+        }
+    }
+}

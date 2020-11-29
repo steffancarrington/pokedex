@@ -1,0 +1,35 @@
+// Typography Styles
+
+h1, 
+h2,
+h3, 
+h4, 
+h5, 
+h6 {
+    font-weight: 100;
+}
+
+h1 {
+    font-size: size(40);
+
+    @include breakpoint(medium) {
+        font-size: size(72);
+    }
+}
+
+h2 {
+    font-size: size(32);
+
+    @include breakpoint(medium) {
+        font-size: size(40);
+    }
+}
+
+h3 {
+    font-size: size(24);
+}
+
+p {
+    font-size: size(16);
+    line-height: 1.5;
+}

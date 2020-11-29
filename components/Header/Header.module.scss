@@ -1,0 +1,175 @@
+// Header Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+.header {
+    height: size(125);
+    filter: drop-shadow(0 size(4) 0 $red-500);
+
+    &__inner {
+        position: relative;
+        height: 100%;
+        background: $red-300;
+        border: 2px solid $red-500;
+        border-bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 6.25rem, 10.5rem 6.25rem, 5.5rem 100%, 0 100%);
+        filter: drop-shadow(0 size(4) 0 $red-500);
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: $minusLayer;
+            height: 100%;
+            width: 100%;
+        }
+
+        &:before {
+            background: $red-500;
+            clip-path: polygon(0 0, 100% 0, 100% 5.95rem, 10.4rem 5.95rem, 5.3rem 98%, 0 98%);
+        }
+
+        &:after {
+            background: $red-300;
+            clip-path: polygon(0 0, 100% 0, 100% 5.7rem, 10.4rem 5.7rem, 5.3rem 95%, 0 95%);
+        }
+    }
+
+    h1 {
+        margin: 0;
+        display: none;
+    }
+
+    .pokedex {
+        &__lights {
+            display: flex;
+        }
+
+        &__light {
+            position: relative;
+            margin: size(15) 0 0 size(20);
+            height: size(70);
+            width: size(70);
+            background: $grey-300;
+            border: size(2) solid black;
+            border-radius: 50%;
+        }
+
+        &__inner {
+            position: relative;
+            display: block;
+            margin: size(8);
+            height: size(50);
+            width: size(50);
+            background: $purple-300;
+            border: size(2) solid black;
+            border-radius: 50%;
+
+            &:before, 
+            &:after {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            &:before {
+                top: size(4);
+                left: size(2);
+                height: size(32);
+                width: size(32);
+                background: $purple-200;
+            }
+
+            &:after {
+                top: size(5);
+                left: size(3);
+                height: size(21);
+                width: size(21);
+                background: $purple-100;
+            }
+        }
+
+        &__mini {
+            display: flex;
+            margin: size(15) 0 0 size(20);
+        }
+
+        &__red,
+        &__yellow,
+        &__green {
+            position: relative;
+            display: block;
+            margin-right: size(10);
+            height: size(15);
+            width: size(15);
+            border: size(2) solid black;
+            border-radius: 50%;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            &:before {
+                top: size(1);
+                left: size(1);
+                height: size(8);
+                width: size(8);
+            }
+
+            &:after {
+                top: size(2);
+                left: size(1);
+                height: size(5);
+                width: size(5);
+            }
+        }
+
+        &__red {
+            background: $red-400;
+
+            &:before {
+                background: $red-200;
+            }
+
+            &:after {
+                background: $red-100;
+            }
+        }
+
+        &__yellow {
+            background: $yellow-300;
+
+            &:before {
+                background: $yellow-200;
+            }
+
+            &:after {
+                background: $yellow-100;
+            }
+        }
+
+        &__green {
+            background: $green-300;
+
+            &:before {
+                background: $green-200;
+            }
+
+            &:after {
+                background: $green-100;
+            }
+        }
+    }
+}
