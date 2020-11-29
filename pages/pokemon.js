@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout/layout';
+import Layout from '../components/Layout/Layout';
 import PokemonInfo from '../components/PokemonInfo/PokemonInfo';
 
 export default function pokemon({pokemon}) {

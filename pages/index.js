@@ -1,5 +1,5 @@
 import { getPokemon } from '../lib/getPokemon';
-import Layout, { title } from '../components/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 import PokemonGrid from '../components/PokemonGrid/PokemonGrid';
 
 const pageHead = {
