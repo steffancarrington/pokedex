@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../Header/Header';
-import styles from './layout.module.scss';
+import styles from './Layout.module.scss';
 
 export default function Layout({ children, home, title, description }) {
     return (
