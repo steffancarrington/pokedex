@@ -10,9 +10,23 @@ const Header = ({home, title}) => {
         <header className={styles.header}>
             <section className={styles.header__inner}>
                 <div className={styles.pokedex__lights}>
-                    <div className={styles.pokedex__light} role="presentation">
-                        <span className={styles.pokedex__inner}></span>
-                    </div>
+                    <Link href={'/'}>
+                        <a>
+                            <div className={styles.pokedex__light} role="presentation">
+                                <span className={styles.pokedex__inner}></span>
+                                <img 
+                                    className={styles.pokedex__pokeball}
+                                    src={'/images/icons/pokeball.svg'} 
+                                    alt="" 
+                                    role="presentation"
+                                    height={25} 
+                                    width={25} 
+                                />
+                            </div>
+                            <span className="hidden-v">Home</span>
+                        </a>
+                    </Link>
+                    
 
                     <div className={styles.pokedex__mini} role="presentation">
                         <span className={styles.pokedex__red}></span>

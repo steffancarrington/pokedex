@@ -16,6 +16,10 @@
     width: 60%;
     max-width: size(250);
 
+    &__inner {
+        display: flex;
+    }
+
     &__input {
         padding: size(5);
         height: size(40);

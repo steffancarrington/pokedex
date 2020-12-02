@@ -20,8 +20,6 @@ const SearchForm = ({action = '/pokemon'}) => {
                 id: query 
             },
         });
-
-        console.log(query);
     });
 
     return (
@@ -40,7 +38,10 @@ const SearchForm = ({action = '/pokemon'}) => {
                     required 
                     type="number"
                 />
-                <button className={`${styles.search__submit} hidden-v`} type="submit">Search</button>
+                <button className={`${styles.search__submit} hidden-v`} type="submit">
+                    <img src={'/images/icons/search.svg'} alt="" role="presentation" height={20} width={20} />
+                    <span>Search</span>
+                </button>
             </div>
         </form>
     );

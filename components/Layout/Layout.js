@@ -21,17 +21,10 @@ export default function Layout({ children, home, title, description }) {
 
             <main className={styles.main}>
                 { children }
-
-                { !home && (
-                <Link href={'/'}>
-                    <a><p>Back To Home</p></a>
-                </Link>
-                
-                )}
             </main>
 
             <footer className={styles.footer}>
-                <p>Copyright { new Date().getFullYear() }.</p>
+                <p className={styles.copyright}> &copy; Copyright { new Date().getFullYear() } Owen Hughes &amp; Steffan Carrington</p>
             </footer>
         </>
     )

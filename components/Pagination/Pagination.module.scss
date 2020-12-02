@@ -27,14 +27,15 @@
             color: white;
             font-size: size(16);
             text-align: center;
-            background: $purple-300;
+            background: $blue-200;
+            border: size(1) solid $blue-300;
         }
 
         &:hover,
         &:focus,
         &:active {
             span {
-                background: lighten($purple-300, 10%);
+                background: lighten($purple-200, 10%);
             }
         }
     }

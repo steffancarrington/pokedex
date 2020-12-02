@@ -1,3 +1,14 @@
+// Layout Component Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
 .container {
     min-height: 100vh;
     padding: 0 0.5rem;
@@ -16,25 +27,12 @@
 }
 
 .footer {
+    padding-bottom: size(40);
+    height: size(60);
     width: 100%;
-    height: 100px;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.footer p {
-    display: flex;
-    align-items: center;
-}
-
-.footer img {
-    margin-left: 0.5rem;
-}
-
-.footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.copyright {
+    font-size: size(12);
+    text-align: center;
 }

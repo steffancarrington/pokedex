@@ -54,6 +54,12 @@
             display: flex;
         }
 
+        &__pokeball {
+            position: absolute;
+            top: size(20);
+            left: size(20);
+        }
+
         &__light {
             position: relative;
             margin: size(15) 0 0 size(20);
@@ -87,14 +93,6 @@
                 height: size(32);
                 width: size(32);
                 background: $purple-200;
-            }
-
-            &:after {
-                top: size(5);
-                left: size(3);
-                height: size(21);
-                width: size(21);
-                background: $purple-100;
             }
         }
 
