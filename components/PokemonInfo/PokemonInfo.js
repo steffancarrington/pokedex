@@ -38,7 +38,15 @@ const PokemonInfo = ({pokemon}) => {
                    data-type={type.type.name} 
                    key={index}
                 >
-                  {type.type.name}
+                    <img
+                        className={styles.pokemon__typeIcon}
+                        src={`/images/icons/${type.type.name}.svg`}
+                        alt={`${type.type.name} Icon`}
+                        width={18}
+                        height={18}
+                        loading="lazy"
+                    /> 
+                    {type.type.name}
                 </p>
                 ))}
             </section>
