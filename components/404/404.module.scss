@@ -1,0 +1,63 @@
+// 404 Component Styles
+
+// Settings
+@import '../../styles/01-settings/colours';
+@import '../../styles/01-settings/fonts';
+@import '../../styles/01-settings/z-index';
+
+// Tools
+@import '../../styles/02-tools/breakpoints';
+@import '../../styles/02-tools/px-to-rem';
+
+
+.notFound {
+    position: relative;
+
+    &__image {
+        position: absolute;
+        top: size(40);
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    &__heading {
+        margin: size(70) 0 size(20);
+        color: $blue-300;
+        font-size: size(144);
+        font-weight: 800;
+    }
+
+    &__subHeading {
+        font-size: size(24);
+        font-weight: 800;
+    }
+
+    &__link {
+        display: block;
+        margin: size(30) auto;
+        width: size(220);
+        text-decoration: none;
+        filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.07));
+    
+        span {
+            display: block;
+            padding: size(15);
+            color: white;
+            font-size: size(16);
+            text-align: center;
+            background: $blue-200;
+            border: size(1) solid $blue-300;
+            clip-path: polygon(0 0, 0 65%, 5% 100%, 100% 100%, 100% 0);
+        }
+    
+        &:hover,
+        &:focus,
+        &:active {
+            span {
+                background: lighten($purple-200, 10%);
+            }
+        }
+    }
+} 
+    

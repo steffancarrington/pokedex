@@ -14,12 +14,16 @@ const SearchForm = ({action = '/pokemon'}) => {
     const handleParam = setValue => e => setValue(e.target.value);
 
     const handleSubmit = preventDefault(() => {
-        router.push({
-            pathname: action,
-            query: { 
-                id: query 
-            },
-        });
+        if (query > 0 && query < 894) {
+            router.push({
+                pathname: action,
+                query: { 
+                    id: query 
+                },
+            });
+          } else {
+            router.push('/404');
+          }
     });
 
     return (
