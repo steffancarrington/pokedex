@@ -1,5 +1,4 @@
 import React from 'react';
-// import { render } from '@testing-library/jest-dom';
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
 
@@ -8,6 +7,7 @@ import PokemonInfo from '../components/PokemonInfo/PokemonInfo';
 describe('Pokemon Info', () => {
     let expectedProps;
 
+    // Define values in beforeEach() to be used across multiple tests
     beforeEach(() => {
         expectedProps = {
             name: 'Bulbasaur',
